@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/vconsole.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/toolTip.js"></script>
+    <script type="text/javascript" src="./js/vconsole.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
 
@@ -21,10 +22,10 @@
                 <div class="introduction">打不到我吧!啦啦啦......</div>
                 <div class="search"></div>
                 <div class="nav">
-                    <div class="nav-item nav-home" id="navHome"></div>
-                    <div class="nav-item nav-file" id="navFile"></div>
-                    <div class="nav-item nav-label" id="navLabel"></div>
-                    <div class="nav-item nav-about" id="navAbout"></div>
+                    <div class="nav-item nav-home" id="navHome" title="主页"></div>
+                    <div class="nav-item nav-file" id="navFile" title="文章列表"></div>
+                    <div class="nav-item nav-label" id="navLabel" title="标签"></div>
+                    <div class="nav-item nav-about" id="navAbout" title="收藏"></div>
                 </div>
             </div>
             <div class="avatar"><img src="./img/avatar.jpg" alt="头像"></div>
@@ -32,7 +33,7 @@
         <div class="middle-col col"></div>
         <div class="main-col col" id="mainContent"></div>
     </div>
-    <script src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
 
 </html>

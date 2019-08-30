@@ -215,3 +215,12 @@ div {
 .main-col {
     padding: 3vw;
 }
+
+/* 提示 */
+.tooltip {
+    z-index: 100000;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}
