@@ -1,0 +1,33 @@
+.article-box {
+    margin: 3rem 0;
+    padding: 1rem 1rem .5rem;
+    background: rgba(255,255,255,0.45);
+    border-radius: 1rem;
+    -webkit-box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.15);
+    box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.15);
+}
+
+.content .article-box:nth-child(1) {
+    margin-top: 0;
+}
+
+.content .article-box:last-child {
+    margin-bottom: 0;
+}
+
+.article-header:hover {
+    color: #b0a0aa;
+}
+
+.article-content {
+
+}
+
+/* 首行缩进 */
+.indent {
+    text-indent: 2em;
+}
+
+.article-footer {
+
+}
