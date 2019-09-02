@@ -1,6 +1,9 @@
 .article-box {
     margin: 3rem 0;
-    padding: 1rem 1rem .5rem;
+    padding: 1.5rem 1.5rem 1rem;
+    overflow: hidden;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
     background: rgba(255,255,255,0.45);
     border-radius: 1rem;
     -webkit-box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.15);
@@ -15,12 +18,15 @@
     margin-bottom: 0;
 }
 
+.article-header {
+    line-height: 2.4rem;
+}
 .article-header:hover {
     color: #b0a0aa;
 }
 
 .article-content {
-
+    margin: 2rem 0;
 }
 
 /* 首行缩进 */
@@ -29,5 +35,20 @@
 }
 
 .article-footer {
+    position: relative;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
 
+.btn-link {
+    float: right;
+    padding: .5rem;
+    color: #fff;
+    background: rgba(166, 218, 220, .8);
+    border-radius: .5rem;
+    transform: scale(0.8);
+}
+
+.btn-link:hover {
+    transform: scale(0.9);
 }
