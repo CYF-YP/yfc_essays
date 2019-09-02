@@ -20,13 +20,13 @@
                 $(element).each(function() {
                     if (this.title) {
                         var temTitle = this.title; //把title的赋给自定义属性 myTilte ，屏蔽自带提示
-                        var deviation = 30; //提示偏移量
+                        var deviation = 50; //提示偏移量
                         $(this).mouseover(function (e) {
                             this.title = "";
                             var temHtml = '<div class="tooltip" id="tooltip">' + temTitle + '</div>';
                             $("body").append(temHtml);
                             $("#tooltip").css({
-                                left: (e.pageX + deviation) + "px",
+                                left: (e.pageX + deviation - 20) + "px",
                                 top: deviation.pageY + "px",
                                 opacity: "1"
                             }).show(250) //设置提示框的坐标，并显示
@@ -35,7 +35,7 @@
                             $("#tooltip").remove()
                         }).mousemove(function (e) {
                             $("#tooltip").css({
-                                left: (e.pageX + deviation) + "px",
+                                left: (e.pageX + deviation - 20) + "px",
                                 top: e.pageY + "px"
                             });
                         });
