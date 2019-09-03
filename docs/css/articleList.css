@@ -20,6 +20,7 @@
 
 .article-header {
     line-height: 2.4rem;
+    cursor: pointer;
 }
 .article-header:hover {
     color: #b0a0aa;
@@ -47,6 +48,7 @@
     background: rgba(166, 218, 220, .8);
     border-radius: .5rem;
     transform: scale(0.8);
+    cursor: pointer;
 }
 
 .btn-link:hover {
