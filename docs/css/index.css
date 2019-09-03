@@ -239,4 +239,5 @@ a {
 
 .main-col {
     padding: 3vw;
+    overflow-y: scroll;
 }
