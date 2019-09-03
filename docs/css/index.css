@@ -18,6 +18,11 @@ div {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 .container {
     position: relative;
     display: grid;
