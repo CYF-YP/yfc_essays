@@ -5,13 +5,24 @@
     <meta name="referrer" content="no-referrer" />
     <!--可以让img标签预加载网络图片-->
     <title>swiper轮播-异形</title>
+    <!-- <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script> -->
     <script type="text/javascript" src="./js/swiper.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/articleList.css" />
     <style>
+        /* img {
+            display: block;
+            width: 100%;
+        }
+         */
         .pre-block {
             margin-bottom: 1.5rem;
         }
+
+        .block-indent {
+            margin-left: 4em;
+        }
+
         .swiper-container {
             width: 20%;
         }
@@ -67,7 +78,7 @@
                 <div class="article-content">
                     <div class="pre-block">
                         <p class="indent">swiper轮播效果(默认):</p>
-                        <pre>
+                        <pre class="block-indent">
 var mySwiper = new Swiper(".swiper1", {
     slidesPerView: 2, //个数
     spaceBetween: 20, //间距
@@ -79,97 +90,97 @@ var mySwiper = new Swiper(".swiper1", {
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide swiper-slide-active">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png" width="100%"
-                                        class="actual-img">
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                                        class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide swiper-slide-next">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" width="100%"
-                                        class="actual-img">
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" class="actual-img"
+                                        alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png"
                                         class="actual-img" alt="">
                                 </div>
                             </div>
@@ -177,7 +188,7 @@ var mySwiper = new Swiper(".swiper1", {
                     </div>
                     <div class="pre-block">
                         <p class="indent">swiper轮播效果(异形):(主要区别在样式,js基本不需要改动)</p>
-                        <pre>
+                        <pre class="block-indent">
 .swiper-slide {
     transition: 300ms;
     transform: scale(0.8);
@@ -198,98 +209,98 @@ var swiper = new Swiper('.swiper2', {
                         <div class="swiper-container swiper2">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide swiper-slide-active">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png" width="100%"
-                                        class="actual-img">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                                        class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide swiper-slide-next">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" width="100%"
-                                        class="actual-img">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" class="actual-img"
+                                        alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png"
                                         class="actual-img" alt="">
                                 </div>
                             </div>
@@ -297,7 +308,7 @@ var swiper = new Swiper('.swiper2', {
                     </div>
                     <div class="pre-block">
                         <p class="indent">swiper轮播效果(异形):(主要区别在样式,js基本不需要改动)</p>
-                        <pre>
+                        <pre class="block-indent">
 .swiper3 .swiper-slide {
     transition: 300ms;
     transform: scale(0.9);
@@ -320,97 +331,97 @@ var swiper = new Swiper('.swiper3', {
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide swiper-slide-active">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png" width="100%"
-                                        class="actual-img">
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                                        class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide swiper-slide-next">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" width="100%"
-                                        class="actual-img">
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" class="actual-img"
+                                        alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="./img/default0.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png" width="100%"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png"
                                         class="actual-img" alt="">
                                 </div>
                             </div>
@@ -418,7 +429,7 @@ var swiper = new Swiper('.swiper3', {
                     </div>
                     <div class="pre-block">
                         <p class="indent">swiper轮播效果(异形):(主要区别在样式,js基本不需要改动)</p>
-                        <pre>
+                        <pre class="block-indent">
 .swiper4 .swiper-slide {
     transition: 300ms;
     transform: scale(0.8);
@@ -444,106 +455,106 @@ var swiper = new Swiper('.swiper4', {
                         <div class="swiper-container swiper4">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide swiper-slide-active">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png" width="100%"
-                                        class="actual-img">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                                        class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide swiper-slide-next">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" width="100%"
-                                        class="actual-img">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" class="actual-img"
+                                        alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" width="100%"
-                                        class="actual-img">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png"
                                         class="actual-img" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="./img/default1.jpg"
-                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png" width="100%"
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png"
                                         class="actual-img" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="pre-block">
-                        <p>注:考虑到transform容易引起图片失真,并不建议使用,可以尝试其他方式.</p>
-                        <pre>
+                        <p>注:考虑到transform容易引起图片失真,并不建议使用,可以尝试其他方式,例如:使用动画效果修改图片width,且图片居中显示高度自适应.</p>
+                        <pre class="block-indent">
 另(可能较常使用的参数):
     init: false, //初始化
     slidesPerView: 2.5, //个数
@@ -583,8 +594,95 @@ var swiper = new Swiper('.swiper4', {
             </div>
         </article>
     </div>
+    <!-- <template id="swiper-slide-template" type="text/template">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-next">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/dj.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/shf.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/ssqw.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/xx-3.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/xx-lmtm.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/xx-tqf.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/xx-zxjj.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zych-hl.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zych-nh.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zych-pd.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zych-yh.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zz-jyf.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zz-ms.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zz-swjy.png"
+                    class="actual-img" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/zz-zxyy.png"
+                    class="actual-img" alt="">
+            </div>
+        </div>
+    </template> -->
     <script>
         $(function () {
+            // $(".swiper-container").each(function (index, element) {
+            //     $(this).html(template('swiper-slide-template'));
+            //     if ($(".swiper-container").length <= index) {
+
+            //     }
+            // });
+
             $(".actual-img").each(function () {
                 var obj = $(this);
                 var actualUrl = obj.attr("data-src");
@@ -592,6 +690,7 @@ var swiper = new Swiper('.swiper4', {
                     obj.attr("src", actualUrl);
                 }
             });
+
             var mySwiper = new Swiper(".swiper1", {
                 slidesPerView: 2, //个数
                 spaceBetween: 20, //间距
