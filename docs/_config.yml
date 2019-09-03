@@ -1,3 +1,8 @@
 theme: jekyll-theme-cayman
-url: # the base hostname & protocol for your site e.g. "http://cyf-yp.github.io"
-baseurl: # the subpath of your site, e.g. "/yfc_essays/"
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url:  http://cyf-yp.github.io
+root: /yfc_essays/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
