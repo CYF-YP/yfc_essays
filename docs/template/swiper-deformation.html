@@ -9,17 +9,9 @@
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/articleList.css" />
     <style>
-        .content {
-            padding: 1.5rem 1.5rem 1rem;
-            overflow: hidden;
-            font-size: 1.6rem;
-            line-height: 1.6rem;
-            background: rgba(255, 255, 255, 0.45);
-            border-radius: 1rem;
-            -webkit-box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.15);
-            box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.15);
+        .pre-block {
+            margin-bottom: 1.5rem;
         }
-
         .swiper-container {
             width: 20%;
         }
@@ -73,15 +65,15 @@
                     <h1>swiper轮播-异形</h1>
                 </header>
                 <div class="article-content">
-                    <div>
+                    <div class="pre-block">
                         <p class="indent">swiper轮播效果(默认):</p>
                         <pre>
-                            var mySwiper = new Swiper(".swiper1", {
-                                slidesPerView: 2, //个数
-                                spaceBetween: 20, //间距
-                                centeredSlides: true, //居中
-                                loop : true //环路
-                            });
+var mySwiper = new Swiper(".swiper1", {
+    slidesPerView: 2, //个数
+    spaceBetween: 20, //间距
+    centeredSlides: true, //居中
+    loop : true //环路
+});
                         </pre>
                         <div class="swiper-container swiper1">
                             <div class="swiper-wrapper">
@@ -183,23 +175,25 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="pre-block">
                         <p class="indent">swiper轮播效果(异形):(主要区别在样式,js基本不需要改动)</p>
                         <pre>
-                            .swiper-slide {
-                                transition: 300ms;
-                                transform: scale(0.8);
-                            }
-                            .swiper-slide-active,
-                            .swiper-slide-duplicate-active {
-                                transform: scale(1);
-                            }
-                            var swiper = new Swiper('.swiper2', {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
-                                centeredSlides: true,
-                                loop: true
-                            });
+.swiper-slide {
+    transition: 300ms;
+    transform: scale(0.8);
+}
+
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+    transform: scale(1);
+}
+
+var swiper = new Swiper('.swiper2', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true
+});
                         </pre>
                         <div class="swiper-container swiper2">
                             <div class="swiper-wrapper">
@@ -301,24 +295,26 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="pre-block">
                         <p class="indent">swiper轮播效果(异形):(主要区别在样式,js基本不需要改动)</p>
                         <pre>
-                            .swiper3 .swiper-slide {
-                                transition: 300ms;
-                                transform: scale(0.9);
-                            }
-                            .swiper3 .swiper-slide-active,
-                            .swiper3 .swiper-slide-duplicate-active {
-                                transform: scale(1);
-                                z-index: 9;
-                            }
-                            var swiper = new Swiper('.swiper3', {
-                                slidesPerView: 2,
-                                spaceBetween: -30,
-                                centeredSlides: true,
-                                loop: true
-                            });
+.swiper3 .swiper-slide {
+    transition: 300ms;
+    transform: scale(0.9);
+}
+
+.swiper3 .swiper-slide-active,
+.swiper3 .swiper-slide-duplicate-active {
+    transform: scale(1);
+    z-index: 9;
+}
+
+var swiper = new Swiper('.swiper3', {
+    slidesPerView: 2,
+    spaceBetween: -30,
+    centeredSlides: true,
+    loop: true
+});
                         </pre>
                         <div class="swiper-container swiper3">
                             <div class="swiper-wrapper">
@@ -420,31 +416,30 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="pre-block">
                         <p class="indent">swiper轮播效果(异形):(主要区别在样式,js基本不需要改动)</p>
                         <pre>
-                            .swiper4 .swiper-slide {
-                                transition: 300ms;
-                                transform: scale(0.8);
-                            }
+.swiper4 .swiper-slide {
+    transition: 300ms;
+    transform: scale(0.8);
+}
                         
-                            .swiper4 .swiper-slide-prev,
-                            .swiper4 .swiper-slide-next {
-                                transform: scale(0.9);
-                                z-index: 9;
-                            }
+.swiper4 .swiper-slide-prev,
+.swiper4 .swiper-slide-next {
+    transform: scale(0.9);
+    z-index: 9;
+}
                         
-                            .swiper4 .swiper-slide-active,
-                            .swiper4 .swiper-slide-duplicate-active {
-                                transform: scale(1);
-                                z-index: 99;
-                            }
-                            var swiper = new Swiper('.swiper4', {
-                                slidesPerView: 4,
-                                spaceBetween: -30,
-                                centeredSlides: true,
-                                loop: true
-                            });
+.swiper4 .swiper-slide-active,
+.swiper4 .swiper-slide-duplicate-active {
+    transform: scale(1);
+    z-index:
+var swiper = new Swiper('.swiper4', {
+    slidesPerView: 4,
+    spaceBetween: -30,
+    centeredSlides: true,
+    loop: true
+});
                             </pre>
                         <div class="swiper-container swiper4">
                             <div class="swiper-wrapper">
@@ -546,39 +541,39 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <p>注:考虑到transform容易导致图片显示模糊,并不建议使用,可以尝试其他方式.</p>
+                    <div class="pre-block">
+                        <p>注:考虑到transform容易引起图片失真,并不建议使用,可以尝试其他方式.</p>
                         <pre>
-                            另(可能较常使用的参数):
-                                init: false, //初始化
-                                slidesPerView: 2.5, //个数
-                                spaceBetween: -50, //间距
-                                centeredSlides: false, //居中
-                                loop: true, //环路
-                                loopedSlides: 3, //loop个数
-                                speed: 300, //速度
-                                autoplay: { //自动轮播
-                                    delay: 3000, //轮播速度
-                                    disableOnInteraction: false, //用户滑动后是否自动轮播
-                                },
-                                freeMode: false, //滑动时只滑动一格,切自动贴合
-                                followFinger: false, //是否跟随手指
-                                touchRatio: 0.2, //触摸变慢
-                                preventInteractionOnTransition: true, //过渡时是否滑动
-                                preventClicks: true, //触摸时阻止默认事件
-                                preventClicksPropagation: true, //阻止click冒泡
-                                preventInteractionOnTransition: true, //过渡时无法滑动
-                                observer: true,// 修改swiper或子元素时，自动初始化
-                                observeParents: false,// 修改swiper的父元素时，自动初始化
-                                on: { //监听
-                                    SlideChangeTransitionEnd: function () {}, //回调函数，swiper从一个slide过渡到另一个slide结束时执行。
-                                }
-                                onSlideChangeEnd: function (swiper) { //旧版本,另一种写法
-                                    swiper.update();
-                                }
+另(可能较常使用的参数):
+    init: false, //初始化
+    slidesPerView: 2.5, //个数
+    spaceBetween: -50, //间距
+    centeredSlides: false, //居中
+    loop: true, //环路
+    loopedSlides: 3, //loop个数
+    speed: 300, //速度
+    autoplay: { //自动轮播
+        delay: 3000, //轮播速度
+        disableOnInteraction: false, //用户滑动后是否自动轮播
+    },
+    freeMode: false, //滑动时只滑动一格,切自动贴合
+    followFinger: false, //是否跟随手指
+    touchRatio: 0.2, //触摸变慢
+    preventInteractionOnTransition: true, //过渡时是否滑动
+    preventClicks: true, //触摸时阻止默认事件
+    preventClicksPropagation: true, //阻止click冒泡
+    preventInteractionOnTransition: true, //过渡时无法滑动
+    observer: true,// 修改swiper或子元素时，自动初始化
+    observeParents: false,// 修改swiper的父元素时，自动初始化
+    on: { //监听
+        SlideChangeTransitionEnd: function () {}, //回调函数，swiper从一个slide过渡到另一个slide结束时执行。
+    }
+    onSlideChangeEnd: function (swiper) { //旧版本,另一种写法
+        swiper.update();
+    }
 
-                                mySwiper.appendSlide([html]); //新增slide,html内容为一个slide
-                                mySwiper.removeSlide([0, 1, 2, 3, 4, 5]); //移除slide块,[]内容为要移除的slide的index
+    mySwiper.appendSlide([html]); //新增slide,html内容为一个slide
+    mySwiper.removeSlide([0, 1, 2, 3, 4, 5]); //移除slide块,[]内容为要移除的slide的index
                         </pre>
                     </div>
                 </div>
