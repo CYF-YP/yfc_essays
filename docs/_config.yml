@@ -1,3 +1,3 @@
 theme: jekyll-theme-cayman
-url: http://cyf-yp.github.io
-root: /yfc_essays/
+url: # the base hostname & protocol for your site e.g. "http://cyf-yp.github.io"
+baseurl: # the subpath of your site, e.g. "/yfc_essays/"
