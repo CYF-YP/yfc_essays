@@ -2,11 +2,24 @@
 <html>
 
 <head>
-    <meta name="referrer" content="no-referrer" />  <!--可以让img标签预加载网络图片-->
+    <meta name="referrer" content="no-referrer" />
+    <!--可以让img标签预加载网络图片-->
     <title>swiper轮播-异形</title>
     <script type="text/javascript" src="./js/swiper.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/articleList.css" />
     <style>
+        .content {
+            padding: 1.5rem 1.5rem 1rem;
+            overflow: hidden;
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            background: rgba(255, 255, 255, 0.45);
+            border-radius: 1rem;
+            -webkit-box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.15);
+            box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
         .swiper-container {
             width: 20%;
         }
@@ -52,11 +65,12 @@
 </head>
 
 <body>
+    <!-- 关于文件路径:本地路径不同目录../ 上传到git需改成./ 具体原因不明 -->
     <div class="content">
         <article class="article-box">
             <div>
                 <header class="article-header">
-                    <h1><a>swiper轮播-异形</a></h1>
+                    <h1>swiper轮播-异形</h1>
                 </header>
                 <div class="article-content">
                     <div>
@@ -565,7 +579,6 @@
 
                                 mySwiper.appendSlide([html]); //新增slide,html内容为一个slide
                                 mySwiper.removeSlide([0, 1, 2, 3, 4, 5]); //移除slide块,[]内容为要移除的slide的index
-
                         </pre>
                     </div>
                 </div>
