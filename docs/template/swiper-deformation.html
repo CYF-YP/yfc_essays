@@ -367,6 +367,12 @@
                                 transform: scale(1);
                                 z-index: 99;
                             }
+                            var swiper = new Swiper('.swiper4', {
+                                slidesPerView: 4,
+                                spaceBetween: -30,
+                                centeredSlides: true,
+                                loop: true
+                            });
                             </pre>
                         <div class="swiper-container swiper4">
                             <div class="swiper-wrapper">
@@ -493,34 +499,36 @@
         </article>
     </div>
     <script>
-        var mySwiper = new Swiper(".swiper1", {
-            slidesPerView: 2, //个数
-            spaceBetween: 20, //间距
-            centeredSlides: true, //居中
-            loop: true //环路
+        $(function () {
+            var mySwiper = new Swiper(".swiper1", {
+                slidesPerView: 2, //个数
+                spaceBetween: 20, //间距
+                centeredSlides: true, //居中
+                loop: true //环路
+            });
+
+            var swiper = new Swiper('.swiper2', {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: true,
+                loop: true
+            });
+
+            var swiper = new Swiper('.swiper3', {
+                slidesPerView: 2,
+                spaceBetween: -30,
+                centeredSlides: true,
+                loop: true
+            });
+
+            var swiper = new Swiper('.swiper4', {
+                slidesPerView: 4,
+                spaceBetween: -30,
+                centeredSlides: true,
+                loop: true
+            });
         });
 
-        var swiper = new Swiper('.swiper2', {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true
-        });
-
-        var swiper = new Swiper('.swiper3', {
-            slidesPerView: 2,
-            spaceBetween: -30,
-            centeredSlides: true,
-            loop: true
-        });
-
-        var swiper = new Swiper('.swiper4', {
-            slidesPerView: 4,
-            spaceBetween: -30,
-            centeredSlides: true,
-            loop: true,
-            freeMode: false,// 滑动时只滑动一格,切自动贴合
-        });
     </script>
 </body>
 
