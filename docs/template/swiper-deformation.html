@@ -137,7 +137,9 @@ var mySwiper = new Swiper(".swiper1", {
     slidesPerView: 2, //个数
     spaceBetween: 20, //间距
     centeredSlides: true, //居中
-    loop : true //环路
+    loop : true, //环路
+    observer: true, // 修改swiper或子元素时，自动初始化
+    observeParents: true // 修改swiper的父元素时，自动初始化
 });
                         </pre>
                         <div class="swiper-container swiper1"></div>
@@ -159,7 +161,9 @@ var swiper = new Swiper('.swiper2', {
     slidesPerView: 2,
     spaceBetween: 20,
     centeredSlides: true,
-    loop: true
+    loop: true,
+    observer: true,
+    observeParents: true
 });
                         </pre>
                         <div class="swiper-container swiper2"></div>
@@ -182,7 +186,9 @@ var swiper = new Swiper('.swiper3', {
     slidesPerView: 2,
     spaceBetween: -30,
     centeredSlides: true,
-    loop: true
+    loop: true,
+    observer: true,
+    observeParents: true
 });
                         </pre>
                         <div class="swiper-container swiper3"></div>
@@ -209,7 +215,9 @@ var swiper = new Swiper('.swiper4', {
     slidesPerView: 4,
     spaceBetween: -30,
     centeredSlides: true,
-    loop: true
+    loop: true,
+    observer: true,
+    observeParents: true
 });
                             </pre>
                         <div class="swiper-container swiper4"></div>
@@ -353,44 +361,37 @@ var swiper = new Swiper('.swiper4', {
                         slidesPerView: 2, //个数
                         spaceBetween: 20, //间距
                         centeredSlides: true, //居中
-                        loop: true //环路
+                        loop: true, //环路
+                        observer: true, // 修改swiper或子元素时，自动初始化
+                        observeParents: true // 修改swiper的父元素时，自动初始化
                     });
 
                     var swiper2 = new Swiper('.swiper2', {
                         slidesPerView: 2,
                         spaceBetween: 20,
                         centeredSlides: true,
-                        loop: true
+                        loop: true,
+                        observer: true,
+                        observeParents: true
                     });
 
                     var swiper3 = new Swiper('.swiper3', {
                         slidesPerView: 2,
                         spaceBetween: -30,
                         centeredSlides: true,
-                        loop: true
+                        loop: true,
+                        observer: true,
+                        observeParents: true
                     });
 
                     var swiper4 = new Swiper('.swiper4', {
                         slidesPerView: 4,
                         spaceBetween: -30,
                         centeredSlides: true,
-                        loop: true
+                        loop: true,
+                        observer: true,
+                        observeParents: true
                     });
-
-                    window.onresize = function () {
-                        if (mySwiper) {
-                            mySwiper.update();
-                        }
-                        if (swiper2) {
-                            swiper2.update();
-                        }
-                        if (swiper3) {
-                            swiper3.update();
-                        }
-                        if (swiper4) {
-                            swiper4.update();
-                        }
-                    }
                 }
             });
         });
