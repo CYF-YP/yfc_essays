@@ -150,7 +150,7 @@
                     });
                 } else {
                     $(this).text("阅读全文");
-                    $($(this).parent().prev().find(".pre-block").toArray().reverse()).each(function (index, element) {
+                    $(($(this).parent().prev().find(".pre-block")).toArray().reverse()).each(function (index, element) {
                         if (index != 0) {
                             $(element).slideToggle();
                         }
