@@ -376,24 +376,26 @@ var swiper = new Swiper('.swiper4', {
                         centeredSlides: true,
                         loop: true
                     });
+
+                    window.onresize = function () {
+                        if (mySwiper) {
+                            mySwiper.update();
+                        }
+                        if (swiper2) {
+                            swiper2.update();
+                        }
+                        if (swiper3) {
+                            swiper3.update();
+                        }
+                        if (swiper4) {
+                            swiper4.update();
+                        }
+                    }
                 }
             });
         });
 
-        window.onresize = function () {
-            if(mySwiper) {
-                mySwiper.update();
-            }
-            if(swiper2) {
-                swiper2.update();
-            }
-            if(swiper3) {
-                swiper3.update();
-            }
-            if(swiper4) {
-                swiper4.update();
-            }
-        }
+
     </script>
 </body>
 
