@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="referrer" content="no-referrer" />
+    <!--可以让img标签预加载网络图片-->
+    <title>滑动</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <style>
+        /* 本地调试时去掉注释 */
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .slide-box {
+            width: 50%;
+            font-size: 0;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide-item {
+            display: inline-block;
+            width: 23%;
+            margin: 1%;
+            vertical-align: top;
+        }
+
+        .slide-item:nth-child(1) {
+            margin-left: 2%;
+        }
+
+        .slide-item:last-child {
+            margin-right: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 关于文件路径:本地路径不同目录../ 上传到git需改成./ 具体原因不明 -->
+    <div class="content">
+        <article class="article-box">
+            <div>
+                <header class="article-header">
+                    <h1>滑动</h1>
+                </header>
+                <div class="article-content">
+                    <div class="pre-block">
+                        <p class="indent">应用于h5页面;pc浏览器打开会有滚动条,当然可以使用一些方法将滚动条隐藏,例如为父元素添加外层元素并使该元素高度小于父元素且超出部分隐藏.</p>
+                    </div>
+                    <div class="pre-block">
+                        <p class="indent">多行滑动:</p>
+                        <pre class="block-indent">
+                            父元素css:
+                              white-space: nowrap;
+                              overflow-x: scroll;
+                              overflow-y: hidden;
+                              -webkit-overflow-scrolling: touch;
+                            子元素:一个子元素为一行,多个为多行 width: 100%; 或 display: block;
+                            子孙元素css:
+                              display: inline-block;
+                        </pre>
+                        <div class="slide-box">
+                            <div class="slide-block"></div>
+                            <div class="slide-block"></div>
+                        </div>
+                    </div>
+                    <div class="pre-block">
+                        <p class="indent">单行滑动:</p>
+                        <pre class="block-indent">
+                            父元素css:
+                              white-space: nowrap;
+                              overflow-x: scroll;
+                              overflow-y: hidden;
+                              -webkit-overflow-scrolling: touch;
+                            子元素:一个子元素为一行 width: 100%; 或 display: block;
+                            子孙元素css:
+                              display: inline-block;
+                            </pre>
+                        <div class="slide-box">
+                            <div class="slide-block"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <template id="slide-own-template" type="text/template">
+        <div class="slide-item">
+            <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                class="actual-img" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./img/default1.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/dj.png"
+                class="actual-img" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
+                class="actual-img" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./img/default1.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
+                class="actual-img" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./img/default0.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png"
+                class="actual-img" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="./img/default1.jpg" data-src="https://static.d2c.cn/img/topic/190509/520/shf.png"
+                class="actual-img" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="../img/default0.jpg" class="actual-img" alt="">
+        </div>
+        <div class="slide-item">
+            <img src="../img/default1.jpg" class="actual-img" alt="">
+        </div>
+    </template>
+    <script>
+        $(function () {
+            $(".slide-block").each(function (index, element) {
+                $(this).html(document.importNode(document.querySelector('#slide-own-template').content, true));
+                if ($(".slide-block").length <= (index + 1)) {
+                    $(".actual-img").each(function () {
+                        var obj = $(this);
+                        var actualUrl = obj.attr("data-src");
+                        if (actualUrl) {
+                            obj.attr("src", actualUrl);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
