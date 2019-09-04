@@ -140,18 +140,20 @@
                 }
             });
 
-            $(".btn-link").on("click", function () {
+            $(".article-box-subclass .btn-link").on("click", function () {
                 if ($(this).text() == "阅读全文") {
                     $(this).text("收起");
                 } else {
                     $(this).text("阅读全文");
                 }
-                $(".pre-block").each(function (index, element) {
+                $(this).parent().prev().find(".pre-block").each(function (index, element) {
                     if (index != 0) {
                         $(element).slideToggle();
                     }
                 });
             });
+
+            $()
         });
     </script>
 </body>
