@@ -43,7 +43,7 @@
 <body>
     <!-- 关于文件路径:本地路径不同目录../ 上传到git需改成./ 具体原因不明 -->
     <div class="content">
-        <article class="article-box">
+        <article class="article-box-subclass">
             <div>
                 <header class="article-header">
                     <h1>滑动</h1>
@@ -55,14 +55,14 @@
                     <div class="pre-block">
                         <p class="indent">多行滑动:</p>
                         <pre class="block-indent">
-                            父元素css:
-                              white-space: nowrap;
-                              overflow-x: scroll;
-                              overflow-y: hidden;
-                              -webkit-overflow-scrolling: touch;
-                            子元素:一个子元素为一行,多个为多行 width: 100%; 或 display: block;
-                            子孙元素css:
-                              display: inline-block;
+父元素css:
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+子元素:一个子元素为一行,多个为多行 width: 100%; 或 display: block;
+子孙元素css:
+  display: inline-block;
                         </pre>
                         <div class="slide-box">
                             <div class="slide-block"></div>
@@ -72,14 +72,14 @@
                     <div class="pre-block">
                         <p class="indent">单行滑动:</p>
                         <pre class="block-indent">
-                            父元素css:
-                              white-space: nowrap;
-                              overflow-x: scroll;
-                              overflow-y: hidden;
-                              -webkit-overflow-scrolling: touch;
-                            子元素:一个子元素为一行 width: 100%; 或 display: block;
-                            子孙元素css:
-                              display: inline-block;
+父元素css:
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+子元素:一个子元素为一行 width: 100%; 或 display: block;
+子孙元素css:
+  display: inline-block;
                             </pre>
                         <div class="slide-box">
                             <div class="slide-block"></div>
