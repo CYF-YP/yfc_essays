@@ -22,7 +22,7 @@
         .article-header {
             margin: 2rem;
         }
-        
+
         .pre-block {
             margin-bottom: 4rem;
         }
@@ -34,6 +34,22 @@
         .swiper-container {
             width: 20%;
             margin: 2rem 4rem;
+        }
+
+        @media screen and (max-width:1366px) {
+
+            /* 当屏幕小于1366时，执行下面css */
+            .swiper-container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:1366px) {
+
+            /* 当屏幕大于1366时，执行下面 */
+            .swiper-container {
+                width: 20%;
+            }
         }
 
         .swiper2 .swiper-slide {
