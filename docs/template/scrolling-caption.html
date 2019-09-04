@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="referrer" content="no-referrer" />
+    <!--可以让img标签预加载网络图片-->
+    <title>滑动</title>
+    <!-- <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script> -->
+    <script type="text/javascript" src="./js/jquery.liMarquee.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/acticleBasic.css" />
+    <link rel="stylesheet" type="text/css" href="./css/liMarquee.css" />
+    <style>
+        .scroll-block {
+            margin: 0 auto;
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .scroll-item {
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 关于文件路径:本地路径不同目录../ 上传到git需改成./ 具体原因不明 -->
+    <div class="content">
+        <article class="article-box-subclass">
+            <div>
+                <header class="article-header">
+                    <h1>滚动字幕</h1>
+                </header>
+                <div class="article-content">
+                    <div class="pre-block">
+                        <p class="indent">横向滚动:</p>
+                        <pre class="block-indent"></pre>
+                        <div>
+                            <div id="marquee0" class="scroll-block">
+                                <a class="scroll-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Sed a nulla.Lorem
+                                    ipsum dolor sitamet, consectetuer.</a>
+                                <a class="scroll-item">Mauris ullamcorper euismod leo. Nulla congue tellus vitae
+                                    ante at pede
+                                    euligula lacinia. Integer sed sapien, rutrum nec.</a>
+                                <a class="scroll-item">Aliquam erat volutpat. Fusce dolor. Vestibulum ornare
+                                    congue
+                                    turpissollicitudin nunc elit. Nullam erat neque, facilisis quis.</a>
+                                <a class="scroll-item">Cum sociis natoque penatibus et magnis dis parturient
+                                    montes,
+                                    nasceturridiculus mus. Nam noneros sed facilisis, bibendum eu.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pre-block">
+                        <p class="indent">纵向滚动:</p>
+                        <pre class="block-indent"></pre>
+                        <div style="height: 15rem;">
+                            <div id="marquee1" class="scroll-block" style="height:100%;">
+                                <ul style="line-height: 3rem;">
+                                    <li class="scroll-item"><a>Lorem ipsum dolor sit amet,
+                                            consectetuer adipiscing elit. Sed a nulla.Lorem
+                                            ipsum dolor sitamet, consectetuer.</a></li>
+                                    <li class="scroll-item"><a>Mauris ullamcorper euismod leo. Nulla
+                                            congue tellus vitae ante at pede
+                                            euligula lacinia. Integer sed sapien, rutrum nec.</a></li>
+                                    <li class="scroll-item"><a>Aliquam erat volutpat. Fusce dolor.
+                                            Vestibulum ornare congue
+                                            turpissollicitudin nunc elit. Nullam erat neque, facilisis quis.</a></li>
+                                    <li class="scroll-item"><a>Cum sociis natoque penatibus et magnis
+                                            dis parturient montes,
+                                            nasceturridiculus mus. Nam noneros sed facilisis, bibendum eu.</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </article>
+    </div>
+    <script>
+        $(function () {
+            $("#marquee0").liMarquee();
+            $("#marquee1").liMarquee({ direction: 'up' });
+        });
+    </script>
+</body>
+
+</html>
