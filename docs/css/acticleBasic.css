@@ -1,0 +1,46 @@
+.article-header {
+    margin: 2rem;
+}
+
+.pre-block {
+    margin-bottom: 4rem;
+}
+
+.block-indent {
+    margin-left: 4em;
+}
+
+@media screen and (max-width:1366px) {
+
+    /* 当屏幕小于1366时，执行下面css */
+    .article-header {
+        text-align: center;
+    }
+
+    .indent {
+        text-indent: 0;
+    }
+
+    .block-indent {
+        margin-left: 1em;
+        overflow-x: scroll;
+    }
+
+}
+
+@media screen and (min-width:1366px) {
+
+    /* 当屏幕大于1366时，执行下面 */
+    .article-header {
+        margin: 2rem;
+    }
+
+    .indent {
+        text-indent: 2em;
+    }
+
+    .block-indent {
+        margin-left: 4em;
+    }
+
+}
