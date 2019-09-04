@@ -39,17 +39,45 @@
         @media screen and (max-width:1366px) {
 
             /* 当屏幕小于1366时，执行下面css */
+            .article-header {
+                text-align: center;
+            }
+
             .swiper-container {
                 width: 100%;
+                margin: auto;
             }
+
+            .indent {
+                text-indent: 0;
+            }
+
+            .block-indent {
+                margin-left: 1em;
+            }
+
         }
 
         @media screen and (min-width:1366px) {
 
             /* 当屏幕大于1366时，执行下面 */
+            .article-header {
+                margin: 2rem;
+            }
+
             .swiper-container {
                 width: 20%;
+                margin: 2rem 4rem;
             }
+
+            .indent {
+                text-indent: 2em;
+            }
+
+            .block-indent {
+                margin-left: 4em;
+            }
+
         }
 
         .swiper2 .swiper-slide {
