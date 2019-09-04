@@ -143,11 +143,6 @@
             $(".article-box-subclass .btn-link").on("click", function () {
                 if ($(this).text() == "阅读全文") {
                     $(this).text("收起");
-                    $(this).parent().prev().find(".pre-block").each(function (index, element) {
-                        if (index != 0) {
-                            $(element).slideToggle();
-                        }
-                    });
                 } else {
                     $(this).text("阅读全文");
                     // $(($(this).parent().prev().find(".pre-block")).toArray().reverse()).each(function (index, element) {
@@ -155,12 +150,14 @@
                     //         $(element).slideToggle();
                     //     }
                     // });
-                    $(this).parent().prev().find(".pre-block").each(function (index, element) {
-                        if (index != 0) {
-                            $(element).slideToggle();
-                        }
-                    });
+
                 }
+
+                $(this).parent().prev().find(".pre-block").each(function (index, element) {
+                    if (index != 0) {
+                        $(element).slideToggle();
+                    }
+                });
             });
             $(".article-box-subclass .btn-link").trigger("click");
         });
