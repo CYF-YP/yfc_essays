@@ -83,6 +83,7 @@
                             </pre>
                         <div class="slide-box">
                             <div class="slide-block"></div>
+                            <div class="btn-link">阅读全文</div>
                         </div>
                     </div>
                 </div>
@@ -134,6 +135,19 @@
                         }
                     });
                 }
+            });
+
+            $(".btn-link").on("click", function () {
+                if($(this).text() == "阅读全文") {
+                    $(this).text("收起");
+                } else {
+                    $(this).text("阅读全文");
+                }
+                $(".pre-block").each(function(index, element){
+                    if(index != 0) {
+                        $(element).slideToggle();
+                    }
+                });
             });
         });
     </script>
