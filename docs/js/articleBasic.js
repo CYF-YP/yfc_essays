@@ -1,5 +1,6 @@
 
 function mdSwitch(element) {
+    debugger;
     var converter = new showdown.Converter(),
         text = $(element).prev(".md-content").value,
         html = converter.makeHtml(text);
