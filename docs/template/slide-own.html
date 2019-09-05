@@ -153,7 +153,6 @@
                     obj.text("阅读全文");
                     $((obj.parent().prev().find(".pre-block")).toArray().reverse()).each(function (index, element) {
                         if (index != (obj.parent().prev().find(".pre-block").length - 1)) {
-                            debugger;
                             $(element).slideToggle();
                         }
                     });
