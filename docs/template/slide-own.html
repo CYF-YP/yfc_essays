@@ -141,17 +141,18 @@
             });
 
             $(".article-box-subclass .btn-link").on("click", function () {
-                if ($(this).text() == "阅读全文") {
-                    $(this).text("收起");
-                    $(this).parent().prev().find(".pre-block").each(function (index, element) {
+                var obj = $(this);
+                if (obj.text() == "阅读全文") {
+                    obj.text("收起");
+                    obj.parent().prev().find(".pre-block").each(function (index, element) {
                         if (index != 0) {
                             $(element).slideToggle();
                         }
                     });
                 } else {
-                    $(this).text("阅读全文");
-                    $(($(this).parent().prev().find(".pre-block")).toArray().reverse()).each(function (index, element) {
-                        if (index != ($(this).parent().prev().find(".pre-block").length - 1)) {
+                    obj.text("阅读全文");
+                    $((obj.parent().prev().find(".pre-block")).toArray().reverse()).each(function (index, element) {
+                        if (index != (obj.parent().prev().find(".pre-block").length - 1)) {
                             debugger;
                             $(element).slideToggle();
                         }
