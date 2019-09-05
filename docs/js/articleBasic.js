@@ -6,6 +6,10 @@ function mdSwitch(element) {
     $(element).text(html);
 }
 
-$('#md-area').on("click", function () {
+$('.md-area').on("click", function () {
     mdSwitch($(this));
+});
+
+$('.md-area').each(function () {
+    $(this).trigger('click');
 });
