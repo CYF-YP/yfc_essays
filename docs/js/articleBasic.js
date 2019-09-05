@@ -1,9 +1,9 @@
 
 function mdSwitch(element) {
     var converter = new showdown.Converter(),
-        text = $(element).prev(".md-content").text(),
+        text = $(element).prev(".md-content").value(),
         html = converter.makeHtml(text);
-    $(element).text(html);
+    $(element).html(html);
 }
 
 $('.md-area').on("click", function () {
