@@ -1,7 +1,7 @@
 
 function mdSwitch(element) {
     var converter = new showdown.Converter(),
-        text = $(element).prev(".md-content"),
+        text = $(element).prev(".md-content").text(),
         html = converter.makeHtml(text);
     $(element).text(html);
 }
