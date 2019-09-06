@@ -7,6 +7,7 @@
     <title>滑动</title>
     <!-- <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script> -->
     <script type="text/javascript" src="./js/jquery.liMarquee.js"></script>
+    <script type="text/javascript" src="./js/articleBasic.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/articleBasic.css" />
     <link rel="stylesheet" type="text/css" href="./css/liMarquee.css" />
     <style>
@@ -33,10 +34,11 @@
                 <div class="article-content">
                     <div class="pre-block">
                         <p class="indent">横向滚动:</p>
-                        <pre class="block-indent">
-父元素设置id="marquee"
-$("#marquee").liMarquee();
-                        </pre>
+                        <div class="block-indent">
+                            <textarea name="" class="md-content"
+                                style="display: none;">父元素id="marquee"&nbsp;&nbsp;&nbsp;&#10;&#10;`$("#marquee").liMarquee();`</textarea>
+                            <div class="md-area"></div>
+                        </div>
                         <div style="margin-top: 2rem;">
                             <div id="marquee0" class="scroll-block">
                                 <a class="scroll-item">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -56,11 +58,11 @@ $("#marquee").liMarquee();
                     </div>
                     <div class="pre-block">
                         <p class="indent">纵向滚动:</p>
-                        <pre class="block-indent">
-父元素设置id="marquee"
-$("#marquee").liMarquee({ direction: 'up' });
-// direction控制方向
-                        </pre>
+                        <div class="block-indent">
+                            <textarea name="" class="md-content"
+                                style="display: none;">父元素id="marquee"&nbsp;&nbsp;&nbsp;&#10;&#10;`$("#marquee").liMarquee({ direction: 'up' }); // direction控制方向`</textarea>
+                            <div class="md-area"></div>
+                        </div>
                         <div style="margin-top: 2rem;height: 15rem;">
                             <div id="marquee1" class="scroll-block" style="height:100%;">
                                 <ul style="line-height: 3rem;">
