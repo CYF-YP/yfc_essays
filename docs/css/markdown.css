@@ -1,4 +1,12 @@
+.md-area ul {
+    margin: 1rem 0 .5rem 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
 code {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
     color: #D34B62;
     background: #F9F2F4;
 }
