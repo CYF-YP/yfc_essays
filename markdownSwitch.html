@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>MarkDown</title>
     <script type="text/javascript" src="C:/Users/Administrator/Desktop/projects/blog/docs/js/showdown.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="docs/css/markdown.css" />
 </head>
 <style>
     body {
-      font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
-     font-size: 16px;
-      line-height: 1.42857143;
-      color: #333;
-      background-color: #fff;
+        font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+        font-size: 16px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
     }
+
     ul li {
         line-height: 24px;
     }
+
     blockquote {
-        border-left:#eee solid 5px;
-        padding-left:20px;
+        border-left: #eee solid 5px;
+        padding-left: 20px;
     }
+
     code {
-        color:#D34B62;
+        color: #D34B62;
         background: #F9F2F4;
     }
 </style>
-<body>
-<div>
-    <textarea id="content" style="height:400px;width:600px;" onkeyup="compile()"></textarea>
-    <div id="result"></div>
 
-</div>
-<script type="text/javascript">
-function compile(){
-    var text = document.getElementById("content").value;
-    console.log(text);
-    var converter = new showdown.Converter();
-    var html = converter.makeHtml(text);
-    document.getElementById("result").innerHTML = html;
-}
-</script>
+<body>
+    <div>
+        <textarea id="content" style="height:400px;width:600px;" onkeyup="compile()"></textarea>
+        <div id="result"></div>
+    </div>
+    <script type="text/javascript">
+        function compile() {
+            var text = document.getElementById("content").value;
+            console.log(text);
+            var converter = new showdown.Converter();
+            var html = converter.makeHtml(text);
+            document.getElementById("result").innerHTML = html;
+        }
+    </script>
 </body>
+
 </html>
+
+<!-- 测试文本 -->
+<!-- 
+### 父元素css:
+```
+white-space: nowrap;
+overflow-x: scroll;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+```
+### 子元素:一个子元素为一行,多个为多行
+`width: 100%;` 或 `display: block;`
+### 子孙元素css:
+`display: inline-block;`
+ -->
