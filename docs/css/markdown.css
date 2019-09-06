@@ -4,6 +4,12 @@
     line-height: 1.4rem;
 }
 
+.md-area p {
+    margin: 1rem 0 .5rem 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
 code {
     font-size: 1.4rem;
     line-height: 1.4rem;
