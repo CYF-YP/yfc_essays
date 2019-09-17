@@ -4,10 +4,10 @@
     overflow: hidden;
     font-size: 1.6rem;
     line-height: 1.6rem;
-    background: rgba(255,255,255,0.45);
+    background: rgba(255, 255, 255, 0.45);
     border-radius: 1rem;
-    -webkit-box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.15);
-    box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.15);
+    -webkit-box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .content .article-box:nth-child(1) {
@@ -22,6 +22,7 @@
     line-height: 2.4rem;
     cursor: pointer;
 }
+
 .article-header:hover {
     color: #b0a0aa;
 }

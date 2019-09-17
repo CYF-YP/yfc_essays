@@ -19,6 +19,27 @@
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-between;
+            width: 50%;
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width:1366px) {
+
+            /* 当屏幕小于1366时，执行下面css */
+            .overturn-box {
+                margin-left: 0;
+            }
+
+        }
+
+        @media screen and (min-width:1366px) {
+
+            /* 当屏幕大于1366时，执行下面 */
+            .overturn-box {
+                margin-left: 3rem;
+                min-height: 25vh;
+            }
+
         }
 
         .overturn-item {
@@ -163,6 +184,11 @@
                 transform: rotateY(360deg);
             }
         }
+
+        .ellipsis {
+            display: inline-block;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -178,7 +204,8 @@
                     <div class="pre-block">
                         <p class="indent">图片翻转:主要使用css3的动画效果(注:处于背后的一面翻转后与原始图像是成镜像显示的,需要在其外层多加一层div并旋转360°)</p>
                         <div class="block-indent">
-                            <textarea name="" class="md-content" style="display: none;">```&#10;  transform: rotateY(0deg);&#10;&#10;```&#10;```&#10; {&#10;    /* 提高图片一的层级 */&#10;    z-index: 9;&#10;    /* 当元素背面显示时,隐藏起来 */&#10;    backface-visibility: hidden;&#10;}&#10;```</textarea>
+                            <textarea name="" class="md-content"
+                                style="display: none;">```&#10;  transform: rotateY(0deg);&#10;&#10;```&#10;```&#10; {&#10;    /* 提高图片一的层级 */&#10;    z-index: 9;&#10;    /* 当元素背面显示时,隐藏起来 */&#10;    backface-visibility: hidden;&#10; }&#10;```</textarea>
                             <div class="md-area"></div>
                         </div>
                         <div class="overturn-box">
@@ -188,7 +215,7 @@
                                         <img src="./img/default0.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
                                             class="actual-img" alt="">
-                                        <span>潮流运动</span>
+                                        <span class="ellipsis">潮流运动</span>
                                     </div>
                                 </div>
                                 <div class="below">
@@ -196,7 +223,7 @@
                                         <img src="./img/default1.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/dj.png"
                                             class="actual-img" alt="">
-                                        <span>度假风</span>
+                                        <span class="ellipsis">度假风</span>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +233,7 @@
                                         <img src="./img/default0.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
                                             class="actual-img" alt="">
-                                        <span>都市休闲</span>
+                                        <span class="ellipsis">都市休闲</span>
                                     </div>
                                 </div>
                                 <div class="below">
@@ -214,7 +241,7 @@
                                         <img src="./img/default1.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
                                             class="actual-img" alt="">
-                                        <span>摩登街头</span>
+                                        <span class="ellipsis">摩登街头</span>
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +251,7 @@
                                         <img src="./img/default0.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png"
                                             class="actual-img" alt="">
-                                        <span>轻奢风</span>
+                                        <span class="ellipsis">轻奢风</span>
                                     </div>
                                 </div>
                                 <div class="below">
@@ -232,7 +259,7 @@
                                         <img src="./img/default1.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/shf.png"
                                             class="actual-img" alt="">
-                                        <span>奢华风</span>
+                                        <span class="ellipsis">奢华风</span>
                                     </div>
                                 </div>
                             </div>
@@ -240,19 +267,22 @@
                                 <div class="above">
                                     <div class="overturn-content">
                                         <img src="./img/default0.jpg" class="actual-img" alt="">
-                                        <span>默认</span>
+                                        <span class="ellipsis">默认</span>
                                     </div>
                                 </div>
                                 <div class="below">
                                     <div class="inside-overturn overturn-content">
                                         <img src="./img/default1.jpg" class="actual-img" alt="">
-                                        <span>默认</span>
+                                        <span class="ellipsis">默认</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <footer class="article-footer">
+                    <div></div>
+                </footer>
             </div>
         </article>
     </div>
