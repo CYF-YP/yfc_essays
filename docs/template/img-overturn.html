@@ -290,12 +290,14 @@
     </div>
     <script>
         $(function () {
-            $(".actual-img").each(function () {
+            $(".actual-img").each(function (index, element) {
                 var obj = $(this);
                 var actualUrl = obj.attr("data-src");
                 if (actualUrl) {
                     obj.attr("src", actualUrl);
-                    $('.overturn-item').height($('.actual-img').eq(0).height());
+                    if((index + 1) == $(".actual-img").length) {
+                        $('.overturn-item').height($('.actual-img').eq(0).height());
+                    }
                 }
             });
         });
