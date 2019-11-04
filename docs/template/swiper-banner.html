@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="referrer" content="no-referrer" />
+    <!--可以让img标签预加载网络图片-->
+    <title>纯css-banner动画&swiper-banner动画</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="./js/articleBasic.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/articleBasic.css" />
+    <style>
+        /* 本地调试时去掉注释 */
+        /* img {
+            display: block;
+            width: 100%;
+        } */
+
+        .clear {
+            *zoom: 1;
+        }
+
+        .clear::after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .show-box {
+            position: relative;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+
+        .img-box {
+            position: absolute;
+            left: 0;
+            width: 2400px;
+            font-size: 0;
+            -webkit-animation: banner 10s infinite;
+            animation: banner 10s infinite;
+        }
+
+        @-webkit-keyframes banner {
+
+            0%,
+            6.66% {
+                left: 0;
+            }
+
+            13.33%,
+            20% {
+                left: -300px;
+            }
+
+            26.66%,
+            33.33% {
+                left: -600px;
+            }
+
+            40%,
+            46.66% {
+                left: -900px;
+            }
+
+            53.33%,
+            60% {
+                left: -1200px;
+            }
+
+            66.66%,
+            73.33% {
+                left: -1500px;
+            }
+
+            80%,
+            86.66% {
+                left: -1800px;
+            }
+
+            93.33%,
+            100% {
+                left: -2100px;
+            }
+        }
+
+        @keyframes banner {
+
+            0%,
+            6.66% {
+                left: 0;
+            }
+
+            13.33%,
+            20% {
+                left: -300px;
+            }
+
+            26.66%,
+            33.33% {
+                left: -600px;
+            }
+
+            40%,
+            46.66% {
+                left: -900px;
+            }
+
+            53.33%,
+            60% {
+                left: -1200px;
+            }
+
+            66.66%,
+            73.33% {
+                left: -1500px;
+            }
+
+            80%,
+            86.66% {
+                left: -1800px;
+            }
+
+            93.33%,
+            100% {
+                left: -2100px;
+            }
+        }
+
+        .slide-item {
+            float: left;
+            width: 300px;
+            height: 300px;
+            background: #000;
+            border-radius: 150px;
+            overflow: hidden;
+        }
+
+        /* swiper */
+        .swiper-container {
+            width: 100%;
+            height: 36vw;
+        }
+
+        .swiper-slide {
+            position: relative;
+        }
+
+        .swiper-slide-item {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            background: #000;
+            border-radius: 50%;
+            overflow: hidden;
+
+            /* -webkit-transform-origin: center center;
+        transform-origin: center center; */
+            transition: 300ms;
+            transform: scale(0.8) translateY(-90%);
+        }
+
+        .swiper-slide-active .swiper-slide-item,
+        .swiper-slide-duplicate-active .swiper-slide-item {
+            /* top: 50%;translateY(-50%);居中,但是效果不理想 */
+            transform: scale(1) translateY(-35%);
+        }
+
+        .swiper-slide.swiper-slide-next .swiper-slide-item,
+        .swiper-slide.swiper-slide-prev .swiper-slide-item {
+            transform: scale(0.9) translateY(-60%);
+        }
+
+        .item-describe {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            font-weight: 600;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <article class="article-box-subclass">
+            <div>
+                <header class="article-header">
+                    <h1>纯css-banner动画&swiper-banner动画</h1>
+                </header>
+                <div class="article-content">
+                    <div class="pre-block">
+                        <p class="indent">
+                            纯css:主要使用animation,固定显示框大小超出部分隐藏,固定图片框大小浮动横向排列,动画效果为修改定位(注:100%到0%的变化比较生硬,暂时考虑先旋转180°,再翻转,但是定位问题还没想好;导航的问题还没想好怎么处理)
+                        </p>
+                        <div class="block-indent">
+                            <textarea name="" class="md-content"
+                                style="display: none;">```&#10;  animation: banner 10s infinite;&#10;&#10;```&#10;```&#10; @-webkit-keyframes banner {&#10;    0%,6.66% {left: 0;}&#10;    13.33%,20% {left: -300px;}&#10; ...&#10;}&#10;```</textarea>
+                            <div class="md-area"></div>
+                        </div>
+                        <div class="show-box">
+                            <div class="img-box clear">
+                                <div class="slide-item">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="slide-item">
+                                    <img src="./img/default1.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dj.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="slide-item">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="slide-item">
+                                    <img src="./img/default1.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
+                                        class="actual-img" alt="">
+                                </div>
+                                <div class="slide-item">
+                                    <img src="./img/default0.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="slide-item">
+                                    <img src="./img/default1.jpg"
+                                        data-src="https://static.d2c.cn/img/topic/190509/520/shf.png" class="actual-img"
+                                        alt="">
+                                </div>
+                                <div class="slide-item">
+                                    <img src="./img/default0.jpg" class="actual-img" alt="">
+                                </div>
+                                <div class="slide-item">
+                                    <img src="./img/default1.jpg" class="actual-img" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pre-block">
+                        <p class="indent">swiper:结合transform进行缩放移动元素制作banner轮播效果</p>
+                        <div class="block-indent">
+                            <textarea name="" class="md-content" style="display: none;">C位元素:&#10;```&#10;  transform: scale(1) translateY(-35%);&#10;```</textarea>
+                            <div class="md-area"></div>
+                        </div>
+                        <div class="swiper-container swiper-show-box">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default0.jpg"
+                                            data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
+                                            class="actual-img" alt="">
+                                        <div class="item-describe">1</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default1.jpg"
+                                            data-src="https://static.d2c.cn/img/topic/190509/520/dj.png"
+                                            class="actual-img" alt="">
+                                        <div class="item-describe">2</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default0.jpg"
+                                            data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
+                                            class="actual-img" alt="">
+                                        <div class="item-describe">3</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default1.jpg"
+                                            data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
+                                            class="actual-img" alt="">
+                                        <div class="item-describe">4</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default0.jpg"
+                                            data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png"
+                                            class="actual-img" alt="">
+                                        <div class="item-describe">5</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default1.jpg"
+                                            data-src="https://static.d2c.cn/img/topic/190509/520/shf.png"
+                                            class="actual-img" alt="">
+                                        <div class="item-describe">6</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default0.jpg" class="actual-img" alt="">
+                                        <div class="item-describe">7</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide-item">
+                                        <img src="./img/default1.jpg" class="actual-img" alt="">
+                                        <div class="item-describe">9</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="article-footer">
+                    <div></div>
+                </footer>
+            </div>
+        </article>
+    </div>
+    <script>
+        $(function () {
+            $(".actual-img").each(function () {
+                var obj = $(this);
+                var actualUrl = obj.attr("data-src");
+                if (actualUrl) {
+                    obj.attr("src", actualUrl);
+                }
+            });
+
+            var swiper = new Swiper('.swiper-show-box', {
+                init: false,// 是否立即初始化
+                observer: true,
+                slidesPerView: 3.6,// 一次展示个数
+                spaceBetween: 0,// 间距
+                centeredSlides: true,// 是否居中
+                loop: true,// 环路
+                autoplay: {
+                    delay: 5000,// 轮播速度
+                    disableOnInteraction: false,// 用户滑动后是否自动轮播
+                },// 自动轮播
+                freeMode: false,// 滑动时只滑动一格,切自动贴合
+                followFinger: false,// 是否跟随手指
+                touchRatio: 0.2,//触摸变慢
+                preventInteractionOnTransition: true,// 过渡时是否滑动
+                preventClicks: true,// 触摸时阻止默认事件
+                preventClicksPropagation: true,// 阻止click冒泡
+                preventInteractionOnTransition: true,// 过渡时无法滑动
+            });
+
+            swiper.init();
+            $('.swiper-slide-item').each(function () {
+                $(this).height($('.swiper-show-box').find('.swiper-slide-active').eq(0).width());
+            });
+        });
+    </script>
+</body>
+
+</html>
