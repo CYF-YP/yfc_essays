@@ -295,6 +295,7 @@
                 var actualUrl = obj.attr("data-src");
                 if (actualUrl) {
                     obj.attr("src", actualUrl);
+                    $('.overturn-item').height($('.actual-img').eq(0).height());
                 }
             });
         });
