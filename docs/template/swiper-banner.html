@@ -38,7 +38,7 @@
             overflow: hidden;
         }
 
-        .img-box {
+        .show-box .img-box {
             position: absolute;
             left: 0;
             width: 2400px;
@@ -133,7 +133,7 @@
             }
         }
 
-        .slide-item {
+        .show-box .slide-item {
             float: left;
             width: 300px;
             height: 300px;
@@ -143,16 +143,16 @@
         }
 
         /* swiper */
-        .swiper-container {
+        .swiper-show-box {
             width: 100%;
             height: 36vw;
         }
 
-        .swiper-slide {
+        .swiper-show-box .swiper-slide {
             position: relative;
         }
 
-        .swiper-slide-item {
+        .swiper-show-box .swiper-slide-item {
             position: absolute;
             top: 50%;
             width: 100%;
@@ -168,18 +168,18 @@
             transform: scale(0.8) translateY(-90%);
         }
 
-        .swiper-slide-active .swiper-slide-item,
-        .swiper-slide-duplicate-active .swiper-slide-item {
+        .swiper-show-box .swiper-slide-active .swiper-slide-item,
+        .swiper-show-box .swiper-slide-duplicate-active .swiper-slide-item {
             /* top: 50%;translateY(-50%);居中,但是效果不理想 */
             transform: scale(1) translateY(-35%);
         }
 
-        .swiper-slide.swiper-slide-next .swiper-slide-item,
-        .swiper-slide.swiper-slide-prev .swiper-slide-item {
+        .swiper-show-box .swiper-slide.swiper-slide-next .swiper-slide-item,
+        .swiper-show-box .swiper-slide.swiper-slide-prev .swiper-slide-item {
             transform: scale(0.9) translateY(-60%);
         }
 
-        .item-describe {
+        .swiper-show-box .item-describe {
             position: absolute;
             left: 0;
             right: 0;
