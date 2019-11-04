@@ -31,11 +31,38 @@
 
         .show-box {
             position: relative;
-            margin: 0 auto;
             width: 300px;
             height: 300px;
             border: 1px solid red;
             overflow: hidden;
+        }
+
+        @media screen and (max-width:1366px) {
+
+            /* 当屏幕小于1366时，执行下面css */
+            .show-box {
+                margin-left: 0;
+            }
+
+            .swiper-show-box {
+                margin-left: 0;
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (min-width:1366px) {
+
+            /* 当屏幕大于1366时，执行下面 */
+            .show-box {
+                margin-left: 3rem;
+            }
+
+            .swiper-show-box {
+                margin-left: 3rem;
+                width: 50%;
+            }
+
         }
 
         .show-box .img-box {
@@ -253,7 +280,8 @@
                     <div class="pre-block">
                         <p class="indent">swiper:结合transform进行缩放移动元素制作banner轮播效果</p>
                         <div class="block-indent">
-                            <textarea name="" class="md-content" style="display: none;">C位元素:&#10;```&#10;  transform: scale(1) translateY(-35%);&#10;```</textarea>
+                            <textarea name="" class="md-content"
+                                style="display: none;">C位元素:&#10;```&#10;  transform: scale(1) translateY(-35%);&#10;```</textarea>
                             <div class="md-area"></div>
                         </div>
                         <div class="swiper-container swiper-show-box">
