@@ -99,7 +99,7 @@
                 </div>
                 <footer class="article-footer">
                     <div></div>
-                    <div class="btn-link">收起</div>
+                    <div class="btn-link">阅读全文</div>
                 </footer>
             </div>
         </article>
@@ -151,6 +151,12 @@
                 }
             });
 
+            $(".pre-block").each(function (index, element) {
+                if (index != 0) {
+                    $(element).hide();
+                }
+            });
+
             $(".article-box-subclass .btn-link").on("click", function () {
                 var obj = $(this);
                 if (obj.text() == "阅读全文") {
@@ -169,7 +175,6 @@
                     });
                 }
             });
-            $(".article-box-subclass .btn-link").trigger("click");
         });
     </script>
 </body>
