@@ -298,7 +298,9 @@
                 if (actualUrl) {
                     obj.attr("src", actualUrl);
                     if((index + 1) == $(".actual-img").length) {
-                        $('.overturn-item').height($('.actual-img').eq(0).height());
+                        $('.overturn-item').each(function() {
+                            $(this).height($('.actual-img').eq(0).height());
+                        });
                     }
                 }
             });
