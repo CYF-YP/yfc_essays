@@ -86,7 +86,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    text-align: center;&#10;    /* 父元素 */&#10;    display: inline/inline-block/inline-table/inline-flex/inline-grid...&#10;    /* 子元素,后几项可能存在兼容性问题使用时需要注意 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    text-align: center;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    display: inline/inline-block/inline-table/inline-flex/inline-grid...&#10;    /* 子元素,后几项可能存在兼容性问题使用时需要注意 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="text-align: center;">
@@ -97,7 +97,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;{&#10;    position: absolute;&#10;    left: 0;&#10;    right: 0;&#10;    margin: auto;&#10;    /* 子元素 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    position: absolute;&#10;    left: 0;&#10;    right: 0;&#10;    margin: auto;&#10;    /* 子元素 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="position: relative;">
@@ -107,7 +107,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;{&#10;    position: absolute;&#10;    left: 50%;&#10;    margin-left: -25px;&#10;    /* 需要已知子元素宽度,margin-left为子元素宽度的一半 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    position: absolute;&#10;    left: 50%;&#10;    margin-left: -25px;&#10;    /* 需要已知子元素宽度,margin-left为子元素宽度的一半 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="position: relative;">
@@ -117,7 +117,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;{&#10;    position: absolute;&#10;    left: 50%;&#10;    transform: translateX(-50%);&#10;    /* 子元素,可能存在兼容性问题使用时需要注意 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    position: absolute;&#10;    left: 50%;&#10;    transform: translateX(-50%);&#10;    /* 子元素,可能存在兼容性问题使用时需要注意 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="position: relative;">
@@ -138,7 +138,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    float: left;&#10;    width: 100%;&#10;    /* 浮动(好麻烦),第一层(外层需要清除浮动) */&#10;}&#10;{&#10;    float: left;&#10;    position: relative;&#10;    left: 50%;&#10;    /* 第二层 */&#10;}&#10;{&#10;    float: left;&#10;    position: relative;&#10;    right: 50%;&#10;    /* 第三层 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    float: left;&#10;    width: 100%;&#10;    /* 浮动(好麻烦),第一层(外层需要清除浮动) */&#10;}&#10;&#10;{&#10;    float: left;&#10;    position: relative;&#10;    left: 50%;&#10;    /* 第二层 */&#10;}&#10;&#10;{&#10;    float: left;&#10;    position: relative;&#10;    right: 50%;&#10;    /* 第三层 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="clear">
@@ -157,7 +157,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    position: absolute;&#10;    left: 50%;&#10;    /* 浮动,父元素(需要清除浮动) */&#10;}&#10;{&#10;    float: left;&#10;    position: relative;&#10;    right: 50%;&#10;    /* 子元素 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    position: absolute;&#10;    left: 50%;&#10;    /* 浮动,父元素(需要清除浮动) */&#10;}&#10;&#10;{&#10;    float: left;&#10;    position: relative;&#10;    right: 50%;&#10;    /* 子元素 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div
@@ -182,7 +182,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    line-height: 150px;&#10;    /* 父元素 */&#10;}&#10;{&#10;    display: inline-block;&#10;    vertical-align: middle;&#10;    /* 子元素,vertical-align相对行高而言,且不可继承 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    line-height: 150px;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    display: inline-block;&#10;    vertical-align: middle;&#10;    /* 子元素,vertical-align相对行高而言,且不可继承 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="line-height: 150px;">
@@ -193,7 +193,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;{&#10;    position: absolute;&#10;    top: 0;&#10;    bottom: 0;&#10;    margin: auto;&#10;    /* 子元素 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    position: absolute;&#10;    top: 0;&#10;    bottom: 0;&#10;    margin: auto;&#10;    /* 子元素 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="position: relative;">
@@ -203,7 +203,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;{&#10;    position: absolute;&#10;    top: 50%;&#10;    margin-top: -25px;&#10;    /* 子元素,margin-top为子元素高度的一半 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    position: absolute;&#10;    top: 50%;&#10;    margin-top: -25px;&#10;    /* 子元素,margin-top为子元素高度的一半 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="position: relative;">
@@ -213,7 +213,7 @@
                 <div class="pre-block">
                     <div class="block-indent">
                         <textarea class="md-content"
-                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;{&#10;    position: absolute;&#10;    top: 50%;&#10;    transform: translateY(-50%);&#10;    /* 子元素,可能存在兼容性问题使用时需要注意 */&#10;}&#10;```</textarea>
+                            style="display: none;">```&#10;{&#10;    position: relative;&#10;    /* 父元素 */&#10;}&#10;&#10;{&#10;    position: absolute;&#10;    top: 50%;&#10;    transform: translateY(-50%);&#10;    /* 子元素,可能存在兼容性问题使用时需要注意 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
                     <div class="show-box" style="position: relative;">
