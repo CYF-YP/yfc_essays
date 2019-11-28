@@ -216,7 +216,7 @@
                             <div class="overturn-item">
                                 <div class="above">
                                     <div class="overturn-content">
-                                        <img src="./img/default0.jpg"
+                                        <img src="../img/default0.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/clyd.png"
                                             class="actual-img" alt="">
                                         <span class="ellipsis">潮流运动</span>
@@ -224,7 +224,7 @@
                                 </div>
                                 <div class="below">
                                     <div class="inside-overturn overturn-content">
-                                        <img src="./img/default1.jpg"
+                                        <img src="../img/default1.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/dj.png"
                                             class="actual-img" alt="">
                                         <span class="ellipsis">度假风</span>
@@ -234,7 +234,7 @@
                             <div class="overturn-item">
                                 <div class="above">
                                     <div class="overturn-content">
-                                        <img src="./img/default0.jpg"
+                                        <img src="../img/default0.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/dsxx.png"
                                             class="actual-img" alt="">
                                         <span class="ellipsis">都市休闲</span>
@@ -242,7 +242,7 @@
                                 </div>
                                 <div class="below">
                                     <div class="inside-overturn overturn-content">
-                                        <img src="./img/default1.jpg"
+                                        <img src="../img/default1.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/mdjt.png"
                                             class="actual-img" alt="">
                                         <span class="ellipsis">摩登街头</span>
@@ -252,7 +252,7 @@
                             <div class="overturn-item">
                                 <div class="above">
                                     <div class="overturn-content">
-                                        <img src="./img/default0.jpg"
+                                        <img src="../img/default0.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/qsf.png"
                                             class="actual-img" alt="">
                                         <span class="ellipsis">轻奢风</span>
@@ -260,7 +260,7 @@
                                 </div>
                                 <div class="below">
                                     <div class="inside-overturn overturn-content">
-                                        <img src="./img/default1.jpg"
+                                        <img src="../img/default1.jpg"
                                             data-src="https://static.d2c.cn/img/topic/190509/520/shf.png"
                                             class="actual-img" alt="">
                                         <span class="ellipsis">奢华风</span>
@@ -270,13 +270,13 @@
                             <div class="overturn-item">
                                 <div class="above">
                                     <div class="overturn-content">
-                                        <img src="./img/default0.jpg" class="actual-img" alt="">
+                                        <img src="../img/default0.jpg" class="actual-img" alt="">
                                         <span class="ellipsis">默认</span>
                                     </div>
                                 </div>
                                 <div class="below">
                                     <div class="inside-overturn overturn-content">
-                                        <img src="./img/default1.jpg" class="actual-img" alt="">
+                                        <img src="../img/default1.jpg" class="actual-img" alt="">
                                         <span class="ellipsis">默认</span>
                                     </div>
                                 </div>
@@ -309,12 +309,9 @@
             });
 
             $(window).resize(function () {
-                $(".horizontalFlip .actual-img")[0].onload = function () {
-                    var that = $(this);
-                    $('.horizontalFlip .overturn-item').each(function () {
-                        $(this).height(that.height());
-                    });
-                };
+                $('.horizontalFlip .overturn-item').each(function () {
+                    $(this).height($(".horizontalFlip .actual-img").eq(0).height());
+                });
             });
         });
     </script>
