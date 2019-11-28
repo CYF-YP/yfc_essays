@@ -4,20 +4,20 @@
 <head>
     <meta name="referrer" content="no-referrer" />
     <!--可以让img标签预加载网络图片-->
-    <title>滑动</title>
+    <title>滚动字幕</title>
     <!-- <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script> -->
     <script type="text/javascript" src="./js/jquery.liMarquee.js"></script>
     <script type="text/javascript" src="./js/articleBasic.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/articleBasic.css" />
     <link rel="stylesheet" type="text/css" href="./css/liMarquee.css" />
     <style>
-        .scroll-block {
+        .contentMarquee .scroll-block {
             margin: 0 auto;
             width: 80%;
             overflow: hidden;
         }
 
-        .scroll-item {
+        .contentMarquee .scroll-item {
             margin-left: 2rem;
         }
     </style>
@@ -26,7 +26,7 @@
 <body>
     <!-- 关于文件路径:本地路径不同目录../ 上传到git需改成./ 具体原因不明 -->
     <div class="content">
-        <article class="article-box-subclass">
+        <article class="article-box-subclass contentMarquee">
             <div>
                 <header class="article-header">
                     <h1>滚动字幕</h1>
@@ -92,8 +92,8 @@
     </div>
     <script>
         $(function () {
-            $("#marquee0").liMarquee();
-            $("#marquee1").liMarquee({ direction: 'up' });
+            $(".contentMarquee #marquee0").liMarquee();
+            $(".contentMarquee #marquee1").liMarquee({ direction: 'up' });
         });
     </script>
 </body>

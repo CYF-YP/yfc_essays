@@ -15,7 +15,7 @@
             width: 100%;
         } */
 
-        .slide-box {
+        .contentSlide .slide-box {
             width: 50%;
             font-size: 0;
             white-space: nowrap;
@@ -27,7 +27,7 @@
         @media screen and (max-width:1366px) {
 
             /* 当屏幕小于1366时，执行下面css */
-            .slide-box {
+            .contentSlide .slide-box {
                 margin-left: 0;
                 width: 100%;
             }
@@ -37,25 +37,25 @@
         @media screen and (min-width:1366px) {
 
             /* 当屏幕大于1366时，执行下面 */
-            .slide-box {
+            .contentSlide .slide-box {
                 margin-left: 3rem;
                 width: 50%;
             }
 
         }
 
-        .slide-box .slide-item {
+        .contentSlide .slide-box .slide-item {
             display: inline-block;
             width: 23%;
             margin: 1%;
             vertical-align: top;
         }
 
-        .slide-box .slide-item:nth-child(1) {
+        .contentSlide .slide-box .slide-item:nth-child(1) {
             margin-left: 2%;
         }
 
-        .slide-box .slide-item:last-child {
+        .contentSlide .slide-box .slide-item:last-child {
             margin-right: 2%;
         }
     </style>
@@ -64,7 +64,7 @@
 <body>
     <!-- 关于文件路径:本地路径不同目录../ 上传到git需改成./ 具体原因不明 -->
     <div class="content">
-        <article class="article-box-subclass">
+        <article class="article-box-subclass contentSlide">
             <div>
                 <header class="article-header">
                     <h1>滑动</h1>
@@ -138,10 +138,10 @@
     </template>
     <script>
         $(function () {
-            $(".slide-block").each(function (index, element) {
+            $(".contentSlide .slide-block").each(function (index, element) {
                 $(this).html(document.importNode(document.querySelector('#slide-own-template').content, true));
-                if ($(".slide-block").length <= (index + 1)) {
-                    $(".actual-img").each(function () {
+                if ($(".contentSlide .slide-block").length <= (index + 1)) {
+                    $(".contentSlide .actual-img").each(function () {
                         var obj = $(this);
                         var actualUrl = obj.attr("data-src");
                         if (actualUrl) {
@@ -151,13 +151,13 @@
                 }
             });
 
-            $(".article-box-subclass .btn-link").parent().prev().find(".pre-block").each(function (index, element) {
+            $(".contentSlide .article-box-subclass .btn-link").parent().prev().find(".pre-block").each(function (index, element) {
                 if (index != 0) {
                     $(element).hide();
                 }
             });
 
-            $(".article-box-subclass .btn-link").on("click", function () {
+            $(".contentSlide .article-box-subclass .btn-link").on("click", function () {
                 var obj = $(this);
                 if (obj.text() == "阅读全文") {
                     obj.text("收起");
