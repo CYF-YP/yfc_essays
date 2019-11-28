@@ -23,7 +23,7 @@
             clear: both;
         }
 
-        .show-box {
+        .elementCenter .show-box {
             width: 150px;
             height: 150px;
             border: 1px solid red;
@@ -33,7 +33,7 @@
         @media screen and (max-width:1366px) {
 
             /* 当屏幕小于1366时，执行下面css */
-            .show-box {
+            .elementCenter .show-box {
                 margin: 0 auto;
             }
         }
@@ -41,18 +41,18 @@
         @media screen and (min-width:1366px) {
 
             /* 当屏幕大于1366时，执行下面 */
-            .show-box {
+            .elementCenter .show-box {
                 margin-left: 3rem;
             }
         }
 
-        .show-box-inner {
+        .elementCenter .show-box-inner {
             width: 50px;
             height: 50px;
             background: #b4dee1;
         }
 
-        .pseudo-element-vertical::after {
+        .elementCenter .pseudo-element-vertical::after {
             display: inline-block;
             content: "";
             width: 0;
@@ -64,7 +64,7 @@
 
 <body>
     <div class="content">
-        <article class="article-box">
+        <article class="article-box elementCenter">
             <div>
                 <header class="article-header">
                     <h1>较常见的元素居中</h1>
@@ -142,10 +142,10 @@
                         <div class="md-area"></div>
                     </div>
                     <div class="clear">
-                        <div
-                            style="position: relative;margin: 0 auto;width: 150px;height: 150px;border: 1px solid red;overflow: hidden;">
+                        <div class="show-box"
+                            style="position: relative;width: 150px;height: 150px;border: 1px solid red;overflow: hidden;">
                             <div style="float: left;width: 100%;">
-                                <div class="show-box"
+                                <div
                                     style="float: left;position: relative;left: 50%;width: unset;height: unset;border: none;overflow: unset;">
                                     <div class="show-box-inner" style="float: left;position: relative;right: 50%;">
                                     </div>
@@ -160,9 +160,9 @@
                             style="display: none;">```&#10;{&#10;    position: absolute;&#10;    left: 50%;&#10;    /* 浮动,父元素(需要清除浮动) */&#10;}&#10;&#10;{&#10;    float: left;&#10;    position: relative;&#10;    right: 50%;&#10;    /* 子元素 */&#10;}&#10;```</textarea>
                         <div class="md-area"></div>
                     </div>
-                    <div
-                        style="position: relative;margin: 0 auto;width: 150px;height: 150px;border: 1px solid red;overflow: hidden;">
-                        <div class="show-box clear"
+                    <div class="show-box"
+                        style="position: relative;width: 150px;height: 150px;border: 1px solid red;overflow: hidden;">
+                        <div class="clear"
                             style="position: absolute;left: 50%;width: unset;height: unset;border: none;overflow: unset;">
                             <div class="show-box-inner" style="float: left;position: relative;right: 50%;"></div>
                         </div>
@@ -238,8 +238,8 @@
                         <div class="md-area"></div>
                     </div>
                     <!-- table -->
-                    <div style="display: table;margin: 0 auto;">
-                        <div class="show-box" style="display: table-cell;vertical-align: middle;">
+                    <div class="show-box" style="display: table;">
+                        <div style="display: table-cell;vertical-align: middle;">
                             <div class="show-box-inner"></div>
                         </div>
                     </div>
