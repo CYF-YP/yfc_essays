@@ -19,7 +19,7 @@
             width: 100%;
         } */
 
-        .swiper-container {
+        .swiper_special_effect .swiper-container {
             width: 20%;
             margin: 2rem 4rem;
         }
@@ -27,7 +27,7 @@
         @media screen and (max-width:1366px) {
 
             /* 当屏幕小于1366时，执行下面css */
-            .swiper-container {
+            .swiper_special_effect .swiper-container {
                 width: 100%;
                 margin: auto;
             }
@@ -36,46 +36,46 @@
         @media screen and (min-width:1366px) {
 
             /* 当屏幕大于1366时，执行下面 */
-            .swiper-container {
+            .swiper_special_effect .swiper-container {
                 width: 20%;
                 margin: 2rem 4rem;
             }
         }
 
-        .swiper2 .swiper-slide {
+        .swiper_special_effect .swiper2 .swiper-slide {
             transition: 300ms;
             transform: scale(0.8);
         }
 
-        .swiper2 .swiper-slide-active,
-        .swiper2 .swiper-slide-duplicate-active {
+        .swiper_special_effect .swiper2 .swiper-slide-active,
+        .swiper_special_effect .swiper2 .swiper-slide-duplicate-active {
             transform: scale(1);
         }
 
-        .swiper3 .swiper-slide {
+        .swiper_special_effect .swiper3 .swiper-slide {
             transition: 300ms;
             transform: scale(0.9);
         }
 
-        .swiper3 .swiper-slide-active,
-        .swiper3 .swiper-slide-duplicate-active {
+        .swiper_special_effect .swiper3 .swiper-slide-active,
+        .swiper_special_effect .swiper3 .swiper-slide-duplicate-active {
             transform: scale(1);
             z-index: 9;
         }
 
-        .swiper4 .swiper-slide {
+        .swiper_special_effect .swiper4 .swiper-slide {
             transition: 300ms;
             transform: scale(0.8);
         }
 
-        .swiper4 .swiper-slide-prev,
-        .swiper4 .swiper-slide-next {
+        .swiper_special_effect .swiper4 .swiper-slide-prev,
+        .swiper_special_effect .swiper4 .swiper-slide-next {
             transform: scale(0.9);
             z-index: 9;
         }
 
-        .swiper4 .swiper-slide-active,
-        .swiper4 .swiper-slide-duplicate-active {
+        .swiper_special_effect .swiper4 .swiper-slide-active,
+        .swiper_special_effect .swiper4 .swiper-slide-duplicate-active {
             transform: scale(1);
             z-index: 99;
         }
@@ -85,7 +85,7 @@
 <body>
     <!-- 关于文件路径:本地路径不同目录../ 上传到git需改成./ 具体原因不明 -->
     <div class="content">
-        <article class="article-box">
+        <article class="article-box swiper_special_effect">
             <div>
                 <header class="article-header">
                     <h1>swiper轮播-异形</h1>
@@ -224,10 +224,10 @@
     </template>
     <script>
         $(function () {
-            $(".swiper-container").each(function (index, element) {
+            $(".swiper_special_effect .swiper-container").each(function (index, element) {
                 $(this).html(document.importNode(document.querySelector('#swiper-slide-template').content, true));
-                if ($(".swiper-container").length <= (index + 1)) {
-                    $(".actual-img").each(function () {
+                if ($(".swiper_special_effect .swiper-container").length <= (index + 1)) {
+                    $(".swiper_special_effect .actual-img").each(function () {
                         var obj = $(this);
                         var actualUrl = obj.attr("data-src");
                         if (actualUrl) {
@@ -235,7 +235,7 @@
                         }
                     });
 
-                    var mySwiper = new Swiper(".swiper1", {
+                    var mySwiper = new Swiper(".swiper_special_effect .swiper1", {
                         slidesPerView: 2, //个数
                         spaceBetween: 20, //间距
                         centeredSlides: true, //居中
@@ -244,7 +244,7 @@
                         observeParents: true // 修改swiper的父元素时，自动初始化
                     });
 
-                    var swiper2 = new Swiper('.swiper2', {
+                    var swiper2 = new Swiper('.swiper_special_effect .swiper2', {
                         slidesPerView: 2,
                         spaceBetween: 20,
                         centeredSlides: true,
@@ -253,7 +253,7 @@
                         observeParents: true
                     });
 
-                    var swiper3 = new Swiper('.swiper3', {
+                    var swiper3 = new Swiper('.swiper_special_effect .swiper3', {
                         slidesPerView: 2,
                         spaceBetween: -30,
                         centeredSlides: true,
@@ -262,7 +262,7 @@
                         observeParents: true
                     });
 
-                    var swiper4 = new Swiper('.swiper4', {
+                    var swiper4 = new Swiper('.swiper_special_effect .swiper4', {
                         slidesPerView: 4,
                         spaceBetween: -30,
                         centeredSlides: true,
