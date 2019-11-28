@@ -29,7 +29,7 @@
             clear: both;
         }
 
-        .show-box {
+        .bannerAnimation .show-box {
             position: relative;
             width: 300px;
             height: 300px;
@@ -40,11 +40,11 @@
         @media screen and (max-width:1366px) {
 
             /* 当屏幕小于1366时，执行下面css */
-            .show-box {
+            .bannerAnimation .show-box {
                 margin: 0 auto;
             }
 
-            .swiper-show-box {
+            .bannerAnimation .swiper-show-box {
                 margin-left: 0;
                 width: 100%;
                 height: 36vw;
@@ -55,11 +55,11 @@
         @media screen and (min-width:1366px) {
 
             /* 当屏幕大于1366时，执行下面 */
-            .show-box {
+            .bannerAnimation .show-box {
                 margin-left: 3rem;
             }
 
-            .swiper-show-box {
+            .bannerAnimation .swiper-show-box {
                 margin-left: 3rem;
                 width: 50%;
                 height: 18vw;
@@ -67,7 +67,7 @@
 
         }
 
-        .show-box .img-box {
+        .bannerAnimation .show-box .img-box {
             position: absolute;
             left: 0;
             width: 2400px;
@@ -162,7 +162,7 @@
             }
         }
 
-        .show-box .slide-item {
+        .bannerAnimation .show-box .slide-item {
             float: left;
             width: 300px;
             height: 300px;
@@ -172,11 +172,11 @@
         }
 
         /* swiper */
-        .swiper-show-box .swiper-slide {
+        .bannerAnimation .swiper-show-box .swiper-slide {
             position: relative;
         }
 
-        .swiper-show-box .swiper-slide-item {
+        .bannerAnimation .swiper-show-box .swiper-slide-item {
             position: absolute;
             top: 50%;
             width: 100%;
@@ -192,18 +192,18 @@
             transform: scale(0.8) translateY(-90%);
         }
 
-        .swiper-show-box .swiper-slide-active .swiper-slide-item,
-        .swiper-show-box .swiper-slide-duplicate-active .swiper-slide-item {
+        .bannerAnimation .swiper-show-box .swiper-slide-active .swiper-slide-item,
+        .bannerAnimation .swiper-show-box .swiper-slide-duplicate-active .swiper-slide-item {
             /* top: 50%;translateY(-50%);居中,但是效果不理想 */
             transform: scale(1) translateY(-35%);
         }
 
-        .swiper-show-box .swiper-slide.swiper-slide-next .swiper-slide-item,
-        .swiper-show-box .swiper-slide.swiper-slide-prev .swiper-slide-item {
+        .bannerAnimation .swiper-show-box .swiper-slide.swiper-slide-next .swiper-slide-item,
+        .bannerAnimation .swiper-show-box .swiper-slide.swiper-slide-prev .swiper-slide-item {
             transform: scale(0.9) translateY(-60%);
         }
 
-        .swiper-show-box .item-describe {
+        .bannerAnimation .swiper-show-box .item-describe {
             position: absolute;
             left: 0;
             right: 0;
@@ -217,7 +217,7 @@
 
 <body>
     <div class="content">
-        <article class="article-box-subclass">
+        <article class="article-box-subclass bannerAnimation">
             <div>
                 <header class="article-header">
                     <h1>纯css-banner动画&swiper-banner动画</h1>
@@ -355,7 +355,7 @@
     </div>
     <script>
         $(function () {
-            $(".actual-img").each(function () {
+            $(".bannerAnimation .actual-img").each(function () {
                 var obj = $(this);
                 var actualUrl = obj.attr("data-src");
                 if (actualUrl) {
@@ -363,7 +363,7 @@
                 }
             });
 
-            var swiper = new Swiper('.swiper-show-box', {
+            var swiper = new Swiper('.bannerAnimation .swiper-show-box', {
                 init: false,// 是否立即初始化
                 observer: true,
                 slidesPerView: 3.6,// 一次展示个数
@@ -384,8 +384,8 @@
             });
 
             swiper.init();
-            $('.swiper-slide-item').each(function () {
-                $(this).height($('.swiper-show-box').find('.swiper-slide-active').eq(0).width());
+            $('.bannerAnimation .swiper-slide-item').each(function () {
+                $(this).height($('.bannerAnimation .swiper-show-box').find('.swiper-slide-active').eq(0).width());
             });
         });
     </script>
