@@ -42,6 +42,8 @@
             /* 当屏幕小于1366时，执行下面css */
             .bannerAnimation .show-box {
                 margin: 0 auto;
+                width: 150px;
+                height: 150px;
             }
 
             .bannerAnimation .swiper-show-box {
@@ -57,6 +59,8 @@
             /* 当屏幕大于1366时，执行下面 */
             .bannerAnimation .show-box {
                 margin-left: 3rem;
+                width: 300px;
+                height: 300px;
             }
 
             .bannerAnimation .swiper-show-box {
@@ -72,11 +76,11 @@
             left: 0;
             width: 2400px;
             font-size: 0;
-            -webkit-animation: banner 10s infinite;
-            animation: banner 10s infinite;
+            -webkit-animation: bannerBig 10s infinite;
+            animation: bannerBig 10s infinite;
         }
 
-        @-webkit-keyframes banner {
+        @-webkit-keyframes bannerBig {
 
             0%,
             6.66% {
@@ -119,7 +123,7 @@
             }
         }
 
-        @keyframes banner {
+        @keyframes bannerBig {
 
             0%,
             6.66% {
@@ -159,6 +163,92 @@
             93.33%,
             100% {
                 left: -2100px;
+            }
+        }
+
+        @-webkit-keyframes bannerSmall {
+
+            0%,
+            6.66% {
+                left: 0;
+            }
+
+            13.33%,
+            20% {
+                left: -150px;
+            }
+
+            26.66%,
+            33.33% {
+                left: -300px;
+            }
+
+            40%,
+            46.66% {
+                left: -450px;
+            }
+
+            53.33%,
+            60% {
+                left: -600px;
+            }
+
+            66.66%,
+            73.33% {
+                left: -750px;
+            }
+
+            80%,
+            86.66% {
+                left: -900px;
+            }
+
+            93.33%,
+            100% {
+                left: -1050px;
+            }
+        }
+
+        @keyframes bannerSmall {
+
+            0%,
+            6.66% {
+                left: 0;
+            }
+
+            13.33%,
+            20% {
+                left: -150px;
+            }
+
+            26.66%,
+            33.33% {
+                left: -300px;
+            }
+
+            40%,
+            46.66% {
+                left: -450px;
+            }
+
+            53.33%,
+            60% {
+                left: -600px;
+            }
+
+            66.66%,
+            73.33% {
+                left: -750px;
+            }
+
+            80%,
+            86.66% {
+                left: -900px;
+            }
+
+            93.33%,
+            100% {
+                left: -1050px;
             }
         }
 
@@ -169,6 +259,34 @@
             background: #000;
             border-radius: 150px;
             overflow: hidden;
+        }
+
+        @media screen and (max-width:1366px) {
+            .bannerAnimation .show-box .img-box {
+                width: 1200px;
+                font-size: 0;
+                -webkit-animation: bannerSmall 10s infinite;
+                animation: bannerSmall 10s infinite;
+            }
+
+            .bannerAnimation .show-box .slide-item {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media screen and (min-width:1366px) {
+            .bannerAnimation .show-box .img-box {
+                width: 2400px;
+                font-size: 0;
+                -webkit-animation: bannerBig 10s infinite;
+                animation: bannerBig 10s infinite;
+            }
+
+            .bannerAnimation .show-box .slide-item {
+                width: 300px;
+                height: 300px;
+            }
         }
 
         /* swiper */
