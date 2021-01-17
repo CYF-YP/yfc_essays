@@ -151,13 +151,13 @@
                 }
             });
 
-            $(".contentSlide .article-box-subclass .btn-link").parent().prev().find(".pre-block").each(function (index, element) {
+            $(".contentSlide.article-box-subclass .btn-link").parent().prev().find(".pre-block").each(function (index, element) {
                 if (index != 0) {
                     $(element).hide();
                 }
             });
 
-            $(".contentSlide .article-box-subclass .btn-link").on("click", function () {
+            $(".contentSlide.article-box-subclass .btn-link").on("click", function () {
                 var obj = $(this);
                 if (obj.text() == "阅读全文") {
                     obj.text("收起");
